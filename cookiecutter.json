@@ -1,0 +1,14 @@
+{
+  "full_name": "Gabriel Valderramos",
+  "email": "gabrielvalderramos@gmail.com",
+  "git_username": "gvalderramos",
+  "project_name": "Python Boilerplate",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
+  "version": "0.1.0",
+  "command_line_interface": "n",
+  "studio_name": "Your studio name",
+  "department_name": "Pipeline / R&D",
+  "__git_host": "https://www.github.com",
+  "__git_slug": "{{ cookiecutter.git_username }}/{{ cookiecutter.project_slug }}"
+}
