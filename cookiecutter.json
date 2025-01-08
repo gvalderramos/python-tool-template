@@ -7,7 +7,10 @@
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
   "version": "0.1.0",
   "command_line_interface": "n",
-  "studio_name": "Your studio name",
+  "qt_application": "n",
+  "qt_api": ["None", "PySide", "PySide2", "PySide6", "PyQt4", "PyQt5"],
+  "qt_wrapper": ["None", "qtpy", "Qt.py"],
+  "studio_name": "",
   "department_name": "Pipeline / R&D",
   "__git_host": "https://www.github.com",
   "__git_slug": "{{ cookiecutter.git_username }}/{{ cookiecutter.project_slug }}"

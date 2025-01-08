@@ -1,0 +1,17 @@
+/* my_css.css */
+QMainWindow {
+    background-color: #148aeb; /* Dark gray background */
+    color: #10e5e9;           /* White text color */
+}
+
+QPushButton {
+    background-color: #4cafa5; /* Green button background */
+    color: white;              /* White text */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}

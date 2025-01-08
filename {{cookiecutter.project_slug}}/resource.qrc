@@ -1,0 +1,13 @@
+<RCC>
+    <qresource>
+    <!-- css Resource -->
+        <file>resource/css/mainwindow.css</file>
+    </qresource>
+    <qresource>
+    <!-- icons and images Resource -->
+    </qresource>
+    <qresource>
+    <!-- ui Resource -->
+        <file>resource/ui/mainwindow.ui</file>
+    </qresource>
+</RCC>

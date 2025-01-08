@@ -20,7 +20,18 @@ license = {text = "No open source"}
 dependencies = [
   {% if cookiecutter.command_line_interface.lower() == "y" -%}
   "typer"
-{%- endif %}
+  {%- endif %}
+  {%- if cookiecutter.qt_application == "y" -%}
+      {%- if cookiecutter.qt_api == "PySide" -%}"PySide",
+        {%- elif cookiecutter.qt_api == "PySide2" -%}"PySide2",
+        {%- elif cookiecutter.qt_api == "PySide6" -%}"PySide6",
+        {%- elif cookiecutter.qt_api == "PyQt4" -%}"PyQt4",
+        {%- elif cookiecutter.qt_api == "PyQt5" -%}"PyQt5",
+      {%- endif %}
+      {%- if cookiecutter.qt_wrapper == "qtpy" -%}"qtpy",
+        {%- elif cookiecutter.qt_wrapper == "Qt.py" -%}"Qt.py",
+      {%- endif %}
+  {%- endif %}
 ]
 
 [project.optional-dependencies]
@@ -46,7 +57,11 @@ package-dir = {"" = "src"}
 
 {% if cookiecutter.command_line_interface.lower() == 'y' %}
 [project.scripts]
-{{cookiecutter.slug}} = "{{cookiecutter.slug}}.cli:app"
+{{cookiecutter.project_slug}} = "{{cookiecutter.project_slug}}.cli:app"
+{% endif %}
+{% if cookiecutter.qt_application.lower() == 'y' %}
+[project.scripts]
+{{cookiecutter.project_slug}} = "{{cookiecutter.project_slug}}.app:run"
 {% endif %}
 
 [tool.pytest.ini_options]
