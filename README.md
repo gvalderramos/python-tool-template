@@ -1,6 +1,4 @@
-====================
-Python Tool Template
-====================
+# Python Tool Template
 This guide describes how to create a Python tool using the `cookiecutter` Python tool template. Follow these steps to generate a boilerplate project for your pipeline application.
 
 ## Prerequisites
