@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import pathlib
+import shutil
 
 def _insert_lines_on_file(path: pathlib.Path, lines: list[str], index: int) -> None:
     with open(path, "r") as file:
@@ -17,8 +18,9 @@ if __name__ == '__main__':
     app_file = pathlib.Path('src', '{{ cookiecutter.project_slug }}', 'app.py')
     main_file = pathlib.Path('src', '{{ cookiecutter.project_slug }}', 'resource', 'ui', 'mainwindow.py')
     if 'n' == '{{ cookiecutter.qt_application|lower }}':
-        pathlib.Path('resource').unlink()
-        pathlib.Path('src', '{{ cookiecutter.project_slug }}', 'resource').unlink()
+        shutil.rmtree(pathlib.Path('resource'))
+        shutil.rmtree(pathlib.Path('src', '{{ cookiecutter.project_slug }}', 'resource'))
+        pathlib.Path('resource.qrc').unlink()
         app_file.unlink()
     else:
         qt_app_imports = {

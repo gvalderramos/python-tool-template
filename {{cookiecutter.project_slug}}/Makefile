@@ -156,7 +156,7 @@ docs: ## generate Sphinx HTML documentation, including API docs
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
-install: clean qt ## install the package to the active Python's site-packages
+install: clean {% if cookiecutter.qt_application == "y" %}qt{% endif %} ## install the package to the active Python's site-packages
 	pip install .
 
 {%- if cookiecutter.qt_application == "y" %}
