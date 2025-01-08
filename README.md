@@ -1,5 +1,11 @@
 # Python Tool Template
-This guide describes how to create a Python tool using the `cookiecutter` Python tool template. Follow these steps to generate a boilerplate project for your pipeline application.
+This guide describes how to create a Python tool using the [cookiecutter](https://pypi.org/project/cookiecutter/) Python tool template. Follow these steps to generate a boilerplate project for your pipeline application.<br />
+This template can create generate 3 kinds of projects:
+* Standalone python api / libraries
+* Python QT applications
+* Python CLI applications
+
+This project was created based on the [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage). Feel free to look there for more info.
 
 ## Prerequisites
 
@@ -19,7 +25,7 @@ Before starting, ensure you have the following installed:
    
    Fill in the prompts as per your project requirements. Below is a breakdown of the fields and their descriptions:
 
-   * full_name: Your full name.
+   * full_name: Your full name.<br />
      Example: `Gabriel Valderramos`
 
    * email: Your email address.<br />
