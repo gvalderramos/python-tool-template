@@ -36,6 +36,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "typer", # it's required to run the .run.py script
     "coverage",  # testing
     "mypy",  # linting
     "pytest",  # testing

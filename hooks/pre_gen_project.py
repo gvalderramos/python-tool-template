@@ -14,12 +14,16 @@ def main():
         #Exit to cancel project
         sys.exit(1)
 
+    is_cli = '{{cookiecutter.command_line_interface}}' == "y"
     qt_app  = '{{ cookiecutter.qt_application }}'
     qt_api  = '{{ cookiecutter.qt_api }}'
     qt_wrapper  = '{{ cookiecutter.qt_wrapper }}'
     if qt_app == "y":
         if qt_api == "None":
             print("Error: You should choose the Qt API if set this project  as Qt Application.")
+            sys.exit(1)
+        if is_cli:
+            print("You should choose or CLI application or Qt Application. Not both")
             sys.exit(1)
     else:
         if (qt_api != "None" or qt_wrapper != "None") and qt_api == "None":
