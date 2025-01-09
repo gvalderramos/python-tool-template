@@ -3,9 +3,9 @@
 
 {{ cookiecutter.project_short_description }}
 
-# Makefile Commands
+# Run Scripts
 
-This project includes a Makefile to simplify common tasks during development, testing, and deployment. Below is a detailed description of each available make command.
+This project includes a run script (if windows `run.bat` and if UNIX `run`) to simplify common tasks during development, testing, and deployment. Below is a detailed description of each available make command.
 
 ## Commands
 
@@ -22,7 +22,7 @@ This project includes a Makefile to simplify common tasks during development, te
 
 ### Cleaning Commands
 
-- **clean-build**  
+- **clean_build**  
   Removes all build artifacts, including directories and files related to distribution:
   - `build/`
   - `dist/`
@@ -30,25 +30,19 @@ This project includes a Makefile to simplify common tasks during development, te
   - `*.egg-info`
   - `*.egg`
 
-- **clean-pyc**  
+- **clean_pyc**  
   Removes Python file artifacts, including:
   - `*.pyc`, `*.pyo`
   - Temporary files (`*~`)
   - Python cache directories (`__pycache__/`)
 
-- **clean-test**  
+- **clean_test**  
   Removes test and coverage artifacts:
   - `.coverage`
   - `htmlcov/`
   - `.pytest_cache`
 
 ### Code Quality Commands
-
-- **lint/flake8**  
-  Checks the code style using `flake8`. This checks the `src/python_cli_test` and `tests` directories for style issues.
-
-- **format/black**  
-  Formats Python source files in the `src/python_cli_test` and `tests` directories using `black`.
 
 - **lint**  
   Alias for `lint/flake8`. Checks the code style using `flake8`.
@@ -71,9 +65,6 @@ This project includes a Makefile to simplify common tasks during development, te
   - Cleans the `docs/` directory.
   - Runs `sphinx-apidoc` to generate API documentation.
   - Builds the HTML documentation.
-
-- **servedocs**  
-  Compiles the Sphinx documentation and watches for changes in `.rst` files. Automatically rebuilds the documentation when changes are detected.
 
 ### Installation Commands
 

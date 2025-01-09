@@ -184,7 +184,7 @@ def qt():
 @app.command(help="Run qt application")
 def run():
     install()
-    subprocess.run("{{cookiecutter.project_slug}}")
+    subprocess.run("{{cookiecutter.project_slug}}", shell=True)
 {%- endif %}
 
 
@@ -194,7 +194,7 @@ def install():
     {%- if cookiecutter.qt_application == "y" %}
     qt()
     {%- endif %}
-    subprocess.run("pip install .")
+    subprocess.run("pip install .", shell=True)
 
 if __name__ == "__main__":
     app()
